@@ -73,6 +73,7 @@ function logout(){
 </template>
 
 <style scoped>
+
 .sidebarPages {
   width: 16%;
   height: 100vh;
@@ -138,4 +139,48 @@ function logout(){
 .wordIcon {
   padding-right: 20px;
 }
+
+@media (max-width: 768px) {
+  .sidebarPages {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: auto;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: stretch;
+    background-color: #ffffff;
+    border-top: 1px solid #eeeeee;
+    padding: 6px 0;
+    z-index: 100;
+  }
+
+  .photo,
+  .pushBtn {
+    display: none;
+  }
+
+  .menu {
+    display: contents;
+  }
+
+  .menu-item,
+  .loginOut {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin: 0;
+    padding: 4px;
+    font-size: 11px;
+    width: auto;
+  }
+
+  .wordIcon {
+    padding-right: 0;
+  }
+}
+
 </style>

@@ -31,12 +31,18 @@ defineEmits(['postSuccess'])
 </template>
 
 <style scoped>
-
-.postPages{
+.postPages {
   width: 58%;
   overflow-y: auto;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
+}
+
+@media (max-width: 768px) {
+  .postPages {
+    width: 100%;
+    padding-bottom: 70px;
+  }
 }
 
 </style>

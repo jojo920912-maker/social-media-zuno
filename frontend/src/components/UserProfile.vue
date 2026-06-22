@@ -91,7 +91,7 @@ async function userReplies() {
       likes: 0,
       comments: 0,
       replyTo: post.Tweet.user.account,
-      avatar: post.Tweet.user.avatar?.startsWith('/uploads')  // ← 加這個判斷
+      avatar: post.Tweet.user.avatar?.startsWith('/uploads')
         ? `http://localhost:3000${post.Tweet.user.avatar}`
         : post.Tweet.user.avatar
     }))
@@ -388,6 +388,13 @@ defineExpose({
   min-height: 100vh;
 }
 
+@media (max-width: 768px) {
+  .UserCard {
+    width: 100%;
+    padding-bottom: 70px;
+  }
+}
+
 .postTitle {
   display: flex;
   align-items: center;
@@ -608,37 +615,14 @@ defineExpose({
 </style>
 
 <style>
+
 .editModal {
   background: #ffffff;
   border-radius: 8px;
-  width: 634px;
-  overflow: hidden;
-  position: fixed;
-  top: 76px;
-  left: 265px;
+  width: 90%;
+  max-width: 634px;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
-@media (min-width: 1366px) {
-  .editModal {
-    left: 308px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .editModal {
-    left: 345px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .editModal {
-    left: 390px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .editModal {
-    left: 585px;
-  }
-}
 </style>

@@ -194,9 +194,11 @@ onMounted(() => {
 </template>
 
 <style scoped>
+
 .settingPages {
   display: flex;
-  width: 1100px;
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
   min-height: 100vh;
   justify-content: space-between;
@@ -207,6 +209,16 @@ onMounted(() => {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   padding: 24px;
+}
+
+@media (max-width: 768px) {
+  .settingPages {
+    flex-direction: column;
+  }
+  .content {
+    width: 100%;
+    padding-bottom: 70px;
+  }
 }
 
 .title {
@@ -250,4 +262,5 @@ onMounted(() => {
   color: #ff6600;
   margin-top: 4px;
 }
+
 </style>

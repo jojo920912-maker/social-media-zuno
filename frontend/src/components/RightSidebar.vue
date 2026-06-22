@@ -84,6 +84,7 @@ function getButtonStyle(user) {
 </template>
 
 <style scoped>
+
 .sidebarRight {
   width: 25%;
   background-color: #F1F1F5;
@@ -93,6 +94,12 @@ function getButtonStyle(user) {
   border-radius: 16px;
   position: sticky;
   top: 8px;
+}
+
+@media (max-width: 1024px) {
+  .sidebarRight {
+    display: none;
+  }
 }
 
 .title {
@@ -145,5 +152,5 @@ function getButtonStyle(user) {
   font-size: 12px;
   color: #888888;
 }
-</style>
 
+</style>

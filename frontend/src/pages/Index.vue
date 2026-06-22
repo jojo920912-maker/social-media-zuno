@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted  } from 'vue'
+import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import PostList from '@/components/PostList.vue'
 import leftSideBar from '@/components/LeftSidebar.vue'
@@ -11,7 +11,6 @@ const posts = ref([])
 
 async function postsApi() {
   try{
-
     const dataApi = await axios.get('/api/tweets', {
       headers: {
         Authorization: `Bearer ${token}`
@@ -44,7 +43,6 @@ const recommendList = ref([])
 
 async function RightSideBarAuthApi() {
   try {
-
     const RightSideBarApiResponse = await axios.get('/api/users/top',{
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -87,13 +85,19 @@ onMounted(() => {
 </template>
 
 <style scoped>
-
 .indexPages {
   display: flex;
-  width: 1100px;
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
   min-height: 100vh;
   justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .indexPages {
+    flex-direction: column;
+  }
 }
 
 </style>

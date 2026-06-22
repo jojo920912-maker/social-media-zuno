@@ -54,10 +54,17 @@ onMounted(() => {
 
 .UserPages {
   display: flex;
-  width: 1100px;
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
   min-height: 100vh;
   justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .UserPages {
+    flex-direction: column;
+  }
 }
 
 </style>
