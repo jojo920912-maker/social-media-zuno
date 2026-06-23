@@ -64,6 +64,7 @@ async function userLogin(account, password) {
 </template>
 
 <style scoped>
+
 .allLogin {
   display: flex;
   justify-content: center;

@@ -299,9 +299,11 @@ onMounted(() => {
 </template>
 
 <style scoped>
+
 .tweetPages {
   display: flex;
-  width: 1100px;
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
   min-height: 100vh;
   justify-content: space-between;
@@ -312,6 +314,16 @@ onMounted(() => {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   padding: 16px;
+}
+
+@media (max-width: 768px) {
+  .tweetPages {
+    flex-direction: column;
+  }
+  .content {
+    width: 100%;
+    padding-bottom: 70px;
+  }
 }
 
 .header {
@@ -403,13 +415,12 @@ onMounted(() => {
   background: #ffffff;
   border-radius: 8px;
   padding: 20px;
-  width: 634px;
+  width: 90%;
+  max-width: 600px;
   min-height: 300px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-right: 500px;
-  margin-top: 60px;
 }
 
 .modalHeader {
@@ -495,4 +506,5 @@ onMounted(() => {
   align-self: center;
   margin-right: 12px;
 }
+
 </style>

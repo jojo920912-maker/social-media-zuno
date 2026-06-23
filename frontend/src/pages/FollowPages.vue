@@ -192,9 +192,11 @@ onMounted(() => {
 </template>
 
 <style scoped>
+
 .followPages {
   display: flex;
-  width: 1100px;
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
   min-height: 100vh;
   justify-content: space-between;
@@ -205,6 +207,16 @@ onMounted(() => {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .followPages {
+    flex-direction: column;
+  }
+  .content {
+    width: 100%;
+    padding-bottom: 70px;
+  }
 }
 
 .header {
@@ -288,4 +300,5 @@ onMounted(() => {
   font-size: 14px;
   color: #555555;
 }
+
 </style>
