@@ -9,16 +9,18 @@
 - Naive UI 元件庫
 - Vite
 - Axios
-- localStorage 狀態管理
+- 響應式設計（RWD）— 支援桌機、平板、手機
+
 
 ## 功能介紹
 
 **使用者前台**
 - 會員註冊 / 登入 / 登出
-- 發布、瀏覽推文
+- 發布、瀏覽推文與回覆
 - 按讚 / 取消按讚
 - 追蹤 / 取消追蹤
-- 個人頁面與頭像管理
+- 個人頁面與頭像、封面管理
+- 響應式版面：桌機三欄、平板收合、手機底部導覽
 
 **後台管理介面**
 - 管理員登入
@@ -49,13 +51,17 @@ npm install
 npm start
 ```
 
+啟動後前端運行於：http://localhost:5173/social-media-zuno/
+
 ## 專案結構
 
 ```
-src/
-├── pages/        # 頁面元件
+frontend/src/
+├── api/          # API 呼叫範例
+├── assets/       # 圖片等靜態資源
 ├── components/   # 共用元件
+├── pages/        # 頁面元件
 ├── router/       # 路由設定
-├── api/          # API 串接
+├── stores/       # Pinia store
 └── utils/        # 工具函式
 ```
