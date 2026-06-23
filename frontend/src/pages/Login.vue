@@ -66,20 +66,20 @@ async function userLogin(account, password) {
 <style scoped>
 
 .allLogin {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #ffffff;
+  padding: 40px 16px;
+  box-sizing: border-box;
 }
 
 .loginCard {
-  width: 360px;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  margin-top: 40px;
 }
 
 .logo {
