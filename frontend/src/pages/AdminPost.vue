@@ -90,9 +90,10 @@ onMounted(() => {
 </template>
 
 <style scoped>
+
 .adminPages {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -168,4 +169,11 @@ onMounted(() => {
   font-weight: bold;
   font-size: 16px;
 }
+
+@media (max-width: 768px) {
+  .adminPost {
+    padding-bottom: 70px;
+  }
+}
+
 </style>

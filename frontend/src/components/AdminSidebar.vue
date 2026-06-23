@@ -53,6 +53,7 @@ function logout(){
   display: flex;
   flex-direction: column;
   padding: 16px;
+  flex-shrink: 0;
 }
 
 .logo {
@@ -99,6 +100,49 @@ function logout(){
 :deep(a.router-link-exact-active) {
   color: #ff6600;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .adminSidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 6px 0;
+    background-color: #ffffff;
+    border-top: 1px solid #eeeeee;
+    z-index: 100;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .menu {
+    display: contents;
+  }
+
+  .menuItem,
+  .loginOut {
+    flex: 1;
+    margin-top: 0;
+    justify-content: center;
+  }
+
+  .menuItem a,
+  .menuItem p,
+  .loginOut p {
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  .loginOut {
+    justify-content: center;
+  }
 }
 
 </style>

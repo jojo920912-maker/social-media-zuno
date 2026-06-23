@@ -92,7 +92,7 @@ onMounted(() => {
 <style scoped>
 .adminUserPages {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -112,7 +112,7 @@ onMounted(() => {
 
 .userList{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 16px;
 }
 
@@ -180,6 +180,12 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .adminUser {
+    padding-bottom: 70px;
+  }
 }
 
 </style>
